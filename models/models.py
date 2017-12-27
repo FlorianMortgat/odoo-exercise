@@ -39,4 +39,4 @@ class exercise(models.Model):
 
                 char = alphabet[case_offset + (pos + 13) % 26]
             ret += char
-        self.computed_field = ret
+        self.exercise_rot13 = ret
