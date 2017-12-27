@@ -29,7 +29,7 @@ class exercise(models.Model):
         alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         alphabet += alphabet.lower()
 
-        plain_text = self.exercise_field
+        plain_text = self.exercise
         ret = ""
 
         for char in plain_text:
