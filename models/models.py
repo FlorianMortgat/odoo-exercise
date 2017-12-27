@@ -30,6 +30,8 @@ class exercise(models.Model):
         alphabet += alphabet.lower()
 
         plain_text = self.exercise
+        if not plain_text: 
+            return
         ret = ""
 
         for char in plain_text:
