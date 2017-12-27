@@ -8,7 +8,7 @@ class exercise(models.Model):
     'sale' module.
     '''
     _name = 'exercise.exercise'
-    _inherit 'sale.order'
+    _inherit = 'sale.order'
 
     # the 'name' field is already provided by the parent model
 
