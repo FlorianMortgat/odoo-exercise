@@ -1,11 +1,13 @@
 <odoo>
   <data>
-    <!-- extending the inherited form view from sale_management -->
+    <!-- trying to create an inherited form view from sale_management and to
+         extend it -->
     <record model="ir.ui.view" id="sale_order_view_form">
       <field name="inherit_id" ref="sale_management.sale_order_view_form"/>
       <field name="name">sale.order.form</field>
       <field name="model">exercise.exercise</field>
       <field name="arch" type="xml">
+          <!-- attempting to put the 2 additional fields after the 'note' field -->
           <xpath expr="//field[@name='note']" position="after">
               <field name="exercise"/>
               <field name="exercise_rot13"/>
@@ -16,7 +18,7 @@
 
 
 
-    <!-- explicit list view definition -->
+    <!-- explicit list view definition (from scaffolding template) -->
     <record model="ir.ui.view" id="exercise.list">
       <field name="name">exercise list</field>
       <field name="model">exercise.exercise</field>
@@ -28,7 +30,7 @@
       </field>
     </record>
 
-    <!-- actions opening views on models -->
+    <!-- actions opening views on models (from scaffolding template) -->
     <record model="ir.actions.act_window" id="exercise.action_window">
       <field name="name">exercise window</field>
       <field name="res_model">exercise.exercise</field>
@@ -54,10 +56,10 @@
     <!-- Top menu item -->
     <menuitem name="exercise" id="exercise.menu_root"/>
     <!-- menu categories -->
-    <menuitem name="Menu 1" id="exercise.menu_1" parent="exercise.menu_root"/>
-    <menuitem name="Menu 2" id="exercise.menu_2" parent="exercise.menu_root"/>
+    <menuitem name="Sales order with “exercise”" id="exercise.menu_1" parent="exercise.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="exercise.menu_2" parent="exercise.menu_root"/> -->
     <!-- actions -->
-    <menuitem name="List" id="exercise.menu_1_list" parent="exercise.menu_1"
+    <menuitem name="List sales orders" id="exercise.menu_1_list" parent="exercise.menu_1"
               action="exercise.action_window"/>
     <!--
     <menuitem name="Server to list" id="exercise" parent="exercise.menu_2"
