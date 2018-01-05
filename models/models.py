@@ -13,10 +13,10 @@ class exercise(models.Model):
     # the 'name' field is already provided by the parent model
 
     # exercise field: a simple string field
-    exercise = fields.Char()
+    exercise = fields.Char(string="Exercise")
 
     # attempt at creating a non-stored computed field
-    exercise_rot13 = fields.Char(compute="_rot13", store=False)
+    exercise_rot13 = fields.Char(string="Exercise rot13", compute="_rot13", store=False)
 
 
     @api.depends('exercise')
