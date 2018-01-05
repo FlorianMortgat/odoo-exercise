@@ -2,12 +2,11 @@
 
 from odoo import models, fields, api
 
-class exercise(models.Model):
+class Exercise(models.Model):
     '''
     ORM model extending the SaleOrder ('sale.order') model provided by the
     'sale' module.
     '''
-    _name = 'exercise.exercise'
     _inherit = 'sale.order'
 
     # the 'name' field is already provided by the parent model
