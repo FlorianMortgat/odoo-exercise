@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* exercise
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-06 19:28+0000\n"
+"PO-Revision-Date: 2018-01-06 19:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exercise
+#: model:ir.model.fields,field_description:exercise.field_sale_order_exercise
+#: model:ir.ui.view,arch_db:exercise.report_saleorder_document
+msgid "Exercise"
+msgstr ""
+
+#. module: exercise
+#: model:ir.ui.view,arch_db:exercise.view_order_form
+msgid "Exercise field"
+msgstr ""
+
+#. module: exercise
+#: model:ir.model.fields,field_description:exercise.field_sale_order_exercise_rot13
+#: model:ir.ui.view,arch_db:exercise.report_saleorder_document
+msgid "Exercise rot13"
+msgstr ""
+
+#. module: exercise
+#: model:ir.model,name:exercise.model_sale_order
+msgid "Quotation"
+msgstr ""
+
