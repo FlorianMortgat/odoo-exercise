@@ -2,6 +2,20 @@
 
 from odoo import models, fields, api
 
+class InvoiceState(models.Model):
+    '''
+    Example ORM model to exemplify relationships.
+    '''
+    _name = 'exercise.order.state'
+
+    name = fields.Char(required=True)
+
+    orders = fields.One2many(
+            comodel_name='sale.order', 
+            inverse_name='exercise_state', 
+            string='Orders', 
+            ondelete='set null')
+
 class Exercise(models.Model):
     '''
     ORM model extending the SaleOrder ('sale.order') model provided by the
@@ -16,6 +30,12 @@ class Exercise(models.Model):
 
     # attempt at creating a non-stored computed field
     exercise_rot13 = fields.Char(string="Exercise rot13", compute="_rot13", store=False)
+
+    # attempt at creating a relationship (many to one)
+    exercise_state = fields.Many2one(
+            comodel_name='exercise.order.state', 
+            inverse_name='orders', 
+            string='Order State (exercise)')
 
 
     @api.depends('exercise')
@@ -41,3 +61,4 @@ class Exercise(models.Model):
                 char = alphabet[case_offset + (pos + 13) % 26]
             ret += char
         self.exercise_rot13 = ret
+

@@ -23,9 +23,16 @@
 
     # always loaded
     'data': [
+        # pre-populate the order state table with some data
+        'data/default_order_states.xml',
+
+        # views
         'views/views.xml',
+        
         # 'security/ir.model.access.csv',
         #'views/templates.xml',
+
+        # reports
         'report/sale_report.xml',
     ],
     # only loaded in demonstration mode

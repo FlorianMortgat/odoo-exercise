@@ -1,0 +1,14 @@
+<odoo>
+    <record id="object0" model="exercise.order.state">
+        <field name="name">State: NO_STATE</field>
+    </record>
+    <record id="object1" model="exercise.order.state">
+        <field name="name">State: RED</field>
+    </record>
+    <record id="object2" model="exercise.order.state">
+        <field name="name">State: BLUE</field>
+    </record>
+    <record id="object3" model="exercise.order.state">
+        <field name="name">State: GREEN</field>
+    </record>
+</odoo>

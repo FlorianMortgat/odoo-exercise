@@ -11,6 +11,7 @@
               <group>
                 <field name="exercise" placeholder="Exercise field" style="display: block;"/>
                 <field name="exercise_rot13" style="display: block;"/>
+                <field name="exercise_state" style="display: block;"/>
               </group>
           </xpath>
       </field>
